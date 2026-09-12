@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Moculus</title>
+</head>
+<body class="d-flex flex-column" style="background: linear-gradient(135deg, #beb3dd, #a084ff);min-height: 100vh;">
+    <nav class="p-3 mb-5 text-white" style="background: linear-gradient(-135deg, #5a28f0, #a084ff)">
+            <a class="navbar-brand" href="#">MFUNS oculus</a>
+    </nav>
+
+    <div class="container-sm rounded flex-grow-1 mb-5 p-4" style="max-width: 1500px;background: linear-gradient(135deg, #f4f2f8, #dad0fc);" >
+        <h1>喵御宅距离十万用户还有。。。</h1>
+        <span id="user-count">加载中...</span>
+        <script>
+            fetch('http://localhost:3000/api/user-count')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('user-count').textContent = data.count;
+                })
+                .catch(error => {
+                    console.error('请求失败:', error);
+                    document.getElementById('user-count').textContent = '获取失败';
+                });
+        </script>
+    </div>
+</body>
+</html>
