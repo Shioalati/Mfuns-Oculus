@@ -10,11 +10,11 @@
             <a class="navbar-brand" href="#">MFUNS oculus</a>
     </nav>
 
-    <div class="container-sm rounded flex-grow-1 mb-5 p-4" style="max-width: 1500px;background: linear-gradient(135deg, #f4f2f8, #dad0fc);" >
+    <div class="container-sm d-flex flex-column rounded flex-grow-1 mb-5 p-4" style="max-width: 1500px;background: linear-gradient(135deg, #f4f2f8, #dad0fc);" >
         <h1>喵御宅距离十万用户还有。。。</h1>
-        <span id="user-count">加载中...</span>
+        <h1 class="display-1 text-center" id="user-count"style="margin-top: 10rem;">加载中...</h1>
         <script>
-            fetch('http://localhost:3000/api/user-count')
+            fetch('https://mfuns-oculus.shioalati.workers.dev/api/user-count')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('user-count').textContent = data.count;
