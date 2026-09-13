@@ -5,3 +5,10 @@ compatibility_date = "2026-09-12"
 [assets]
 directory = "./public"
 binding = "ASSETS"
+
+[triggers]
+crons = ["19 * * * *"]
+
+[[kv_namespaces]]
+binding = "kv_MfunsUserCount"
+id = "7da3f280e5e04c67abb4b39a3fdb12bc"
