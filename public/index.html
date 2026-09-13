@@ -17,7 +17,7 @@
             fetch('https://mfuns-oculus.shioalati.workers.dev/api/user-count')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('user-count').textContent = data.maxUid.toLocaleString();
+                    document.getElementById('user-count').textContent = data.remaining.toLocaleString();
                 })
                 .catch(error => {
                     console.error('请求失败:', error);
