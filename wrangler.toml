@@ -7,7 +7,7 @@ directory = "./public"
 binding = "ASSETS"
 
 [triggers]
-crons = ["19 * * * *"]
+crons = ["*/20 * * * *"]
 
 [[kv_namespaces]]
 binding = "kv_MfunsUserCount"
